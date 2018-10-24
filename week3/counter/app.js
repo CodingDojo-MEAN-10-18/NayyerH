@@ -35,7 +35,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/add2', function(req,res) {
-	req.session.visits++;
+	req.session.visits = req.session.visits +2 ;
 	res.redirect('/');
 })
 
