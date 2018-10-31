@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	
+	<h2>Details Page </h2>
+	
+		<h3>Name: <%= cat.name %></h3>
+		<% for (var x in cat.sleeping_spot) { %>
+		<h4>sleeping spots: <%= cat.sleeping_spot[x] %></h4>
+		<hr>
+        <% } %>
+	<a href ="/">Back to index</a>
+</body>
+</html>
