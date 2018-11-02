@@ -3,23 +3,12 @@ const app = express();
 const path = require('path');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const flash = require('express-flash');
-const session = require('express-session');
+
 
 app.set('views', path.join(__dirname, './views'));
 app.set('view engine','ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'static')));
-
-
-app.use(flash());
-
-app.use(session({
-    secret: 'SuperSecretCode',
-    resave: false,
-    saveUninitialized: true,
-    cookie: { maxAge: 60000 },
-}));
 
 
 mongoose.connect('mongodb://localhost/cat',{ useNewUrlParser: true });
