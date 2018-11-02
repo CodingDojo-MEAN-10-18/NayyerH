@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  
+
+
+<table>
+    <thead>
+      <th>Breed</th>
+      <th>Color</th>
+      <th>Eye Color</th>
+      <th>Age</th>
+      <th>Is Pet</th>
+      <th>Actions</th>
+    </thead>
+
+    <tbody>
+      <% for (const cat of cats) { %>
+      <tr>
+        <td>
+          <%= cat.breed %>
+        </td>
+        <td>
+            <%= cat.color %>
+         
+        </td>
+        <td>
+          <%= cat.eyeColor %>
+        </td>
+         <td>
+          <%= cat.age %>
+        </td>
+         <td>
+          <%= cat.isPet %>
+        </td>
+        <td><a href='/cats/<%= cat._id %>'>show details </a></td>
+        <td><a href='/cats/destroy/<%= cat._id %>'>Delete </a></td>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+  <hr><br>
+<a href='/cats/new'> add new cat </a>
+</body>
+
+</html>

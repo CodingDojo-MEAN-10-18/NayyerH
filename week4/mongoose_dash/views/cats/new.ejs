@@ -1,0 +1,30 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>Cats dashboard</title>
+	<link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+
+  <div id="wrapper">
+    <h1>Welcome to Cat World </h1>
+
+    <form action="/cats" method="POST">
+
+      <p>Cat Breed: <input type="text" name="breed" /></p>
+
+      <p>Color: <input type="text" name="color" /></p>
+
+      <p>Eye Color: <input type="text" name="eyeColor" /></p>
+
+      <p>Pet ?: <input type="radio" name="isPet" value="true" /> True</p>
+              <p>  <input type="radio" name="isPet" value="false" /> False</p>
+
+      <p>Age: <input type="number" name="age" /></p>
+
+      <p><input type="submit" value="Add my Cat too !" name="submit" />    
+</p>
+    </form>
+  </div>
+</body>
+</html>

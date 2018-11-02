@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cats dashboard</title>
+	<link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+
+  <div id="wrapper">
+    <h1>Welcome to Cat World </h1>
+     <h4>you can edit here  </h4>
+
+    <form action="/cats/<%= cat.id %>" method="POST">
+
+      <p>Cat Breed: <input type="text" name="breed" /></p>
+
+      <p>Color: <input type="text" name="color" /></p>
+
+      <p>Eye Color: <input type="text" name="eyeColor" /></p>
+
+      
+      <p>Pet ?: <input type="radio" name="isPet" value="true" /> True</p>
+              <p>  <input type="radio" name="isPet" value="false" /> False</p>
+      <p>Age: <input type="number" name="age" /></p>
+
+      <p><input type="submit" value="Edit my Cat info !" name="submit" />    
+</p>
+    </form>
+  </div>
+</body>
+</html>
